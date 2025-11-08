@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/harsh/OneDrive/Desktop/project/Churn/churn_mlops_pipeline/mlruns/404420755481360642/9f1763d579194ca9989ddd1918f45019/artifacts
+end_time: 1762621024967
+entry_point_name: ''
+experiment_id: '404420755481360642'
+lifecycle_stage: active
+run_id: 9f1763d579194ca9989ddd1918f45019
+run_name: unleashed-boar-19
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762621020511
+status: 3
+tags: []
+user_id: harsh

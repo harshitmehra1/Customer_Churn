@@ -1,0 +1,10 @@
+artifact_location: file:///C:/Users/harsh/OneDrive/Desktop/project/Churn/churn_mlops_pipeline/mlruns/404420755481360642/models/m-9db7d3c6985948ff81693761c4bc16ff/artifacts
+creation_timestamp: 1762621242391
+experiment_id: '404420755481360642'
+last_updated_timestamp: 1762621246255
+model_id: m-9db7d3c6985948ff81693761c4bc16ff
+model_type: null
+name: model
+source_run_id: 93de9753253e4289a0c86d82362c76d2
+status: 2
+status_message: null
