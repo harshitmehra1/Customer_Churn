@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/harsh/OneDrive/Desktop/project/Churn/churn_mlops_pipeline/mlruns/404420755481360642/7b72abd5ed4f4e5295192682d75b2b8e/artifacts
+end_time: 1762697028319
+entry_point_name: ''
+experiment_id: '404420755481360642'
+lifecycle_stage: active
+run_id: 7b72abd5ed4f4e5295192682d75b2b8e
+run_name: monumental-ant-672
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762697024177
+status: 3
+tags: []
+user_id: harsh

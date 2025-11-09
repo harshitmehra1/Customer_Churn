@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/harsh/OneDrive/Desktop/project/Churn/churn_mlops_pipeline/mlruns/404420755481360642/d71f15f8a70242e8a8cd07283fd83082/artifacts
+end_time: 1762696908840
+entry_point_name: ''
+experiment_id: '404420755481360642'
+lifecycle_stage: active
+run_id: d71f15f8a70242e8a8cd07283fd83082
+run_name: unique-bass-845
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762696902297
+status: 3
+tags: []
+user_id: harsh

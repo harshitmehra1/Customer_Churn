@@ -5,7 +5,8 @@ import mlflow.sklearn
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, f1_score, classification_report
 from src.data_preprocessing import load_and_preprocess_data
-from termcolor import colored  # 🟢 for colored console output
+
+from termcolor import colored                               # 🟢 For colored console output
 
 
 def train_model():
