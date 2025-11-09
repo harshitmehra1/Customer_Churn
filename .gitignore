@@ -1,0 +1,36 @@
+# ==========================================
+# 🧠 PYTHON & MLOPS PROJECT GITIGNORE
+# ==========================================
+
+# --- Virtual environments ---
+venv/
+.env/
+
+# --- MLflow logs and experiments ---
+mlruns/
+*.db
+*.log
+
+# --- Trained model files ---
+models/*.pkl
+models/*.joblib
+
+# --- Python cache ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# --- Jupyter & Streamlit temporary files ---
+.ipynb_checkpoints/
+.streamlit/
+
+# --- IDE / System specific files ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Miscellaneous ---
+*.bak
+*.tmp
