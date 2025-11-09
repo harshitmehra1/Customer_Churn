@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/harsh/OneDrive/Desktop/project/Churn/churn_mlops_pipeline/mlruns/404420755481360642/9c19925c8de7445fa549287d34516bc2/artifacts
+end_time: 1762699531522
+entry_point_name: ''
+experiment_id: '404420755481360642'
+lifecycle_stage: active
+run_id: 9c19925c8de7445fa549287d34516bc2
+run_name: adaptable-vole-997
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762699525896
+status: 3
+tags: []
+user_id: harsh
