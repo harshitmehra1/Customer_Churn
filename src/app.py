@@ -91,21 +91,45 @@ with tab3:
 
     results_df = pd.DataFrame(results).set_index("Model")
 
+    # 🔹 Make table wider and centered
     st.subheader("📋 Performance Metrics Comparison")
-    st.dataframe(results_df.style.format("{:.2%}"))
+    st.markdown(
+        f"""
+        <style>
+        .metrics-table {{
+            width: 100%;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }}
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
 
+    # Render the table full width
+    st.dataframe(
+        results_df.style.format("{:.2%}")
+        .set_properties(**{"text-align": "center"})
+        .set_table_styles([
+            {"selector": "th", "props": [("text-align", "center")]}
+        ]),
+        use_container_width=True
+    )
+
+    # 🔹 Matching width visual comparison chart
     st.subheader("📊 Visual Comparison")
     fig, ax = plt.subplots(figsize=(8, 5))
     results_melted = results_df.reset_index().melt(id_vars="Model", var_name="Metric", value_name="Score")
     sns.barplot(x="Metric", y="Score", hue="Model", data=results_melted, palette="viridis", ax=ax)
     plt.ylabel("Score")
-    plt.title("Random Forest vs XGBoost Performance")
-    st.pyplot(fig)
+    plt.title("Random Forest vs XGBoost Performance", fontsize=13)
+    st.pyplot(fig, use_container_width=True)
 
     st.markdown("---")
     st.subheader("💡 Recommendation for Business Teams")
-    col1, col2 = st.columns(2)
 
+    col1, col2 = st.columns(2)
     with col1:
         st.markdown("### 🌲 Random Forest")
         st.markdown("""
@@ -125,6 +149,7 @@ with tab3:
         """)
 
     st.success("✅ Tip: Choose your model based on your **business goal**, not just accuracy!")
+
 
 # ---------------------------
 # 📊 MODEL INSIGHTS TAB
@@ -236,22 +261,33 @@ with tab1:
         # ---------------------------
         # 🧾 Display Results
         # ---------------------------
-        if pred == 1:
-            st.error(f"🔴 High risk of churn ({prob:.1f}%)")
-            st.markdown("**Possible reasons for churn:**")
-            if risk_reasons:
-                for r in risk_reasons:
-                    st.markdown(f"- {r}")
-            else:
-                st.markdown("- Short engagement or higher service charges")
+
+
+        prob_rounded = round(prob)
+
+        # Categorize churn risk level
+        if prob_rounded < 30:
+            risk_level = "🟢 Low"
+        elif prob_rounded < 60:
+            risk_level = "🟠 Moderate"
         else:
-            st.success(f"🟢 Low risk of churn ({prob:.1f}%)")
+            risk_level = "🔴 High"
+
+        # Display final prediction with explanation
+        if pred == 1:
+            st.error(f"{risk_level} churn risk:  {prob:.1f}%")
+            st.caption(f"⚠️ About {prob_rounded}% chance this customer may leave soon.")
+            st.markdown("**Possible reasons for churn:**")
+            for r in risk_reasons:
+                st.markdown(f"- {r}")
+        else:
+            st.success(f"{risk_level} churn risk:  {prob:.1f}%")
+            st.caption(f"💬 Only {prob_rounded}% chance this customer may leave — likely to stay.")
             st.markdown("**Why this customer might stay:**")
-            if stay_reasons:
-                for r in stay_reasons:
-                    st.markdown(f"- {r}")
-            else:
-                st.markdown("- Good service satisfaction and stability")
+            for r in stay_reasons:
+                st.markdown(f"- {r}")
+        
+    
 
 # ---------------------------
 # 📘 FOOTER
