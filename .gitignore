@@ -11,9 +11,9 @@ mlruns/
 *.db
 *.log
 
-# --- Trained model files ---
-models/*.pkl
-models/*.joblib
+# # --- Trained model files ---
+# models/*.pkl
+# models/*.joblib
 
 # --- Python cache ---
 __pycache__/
