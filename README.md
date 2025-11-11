@@ -4,7 +4,7 @@
 
 # 📞 Telco Customer Churn Prediction Dashboard
 
-### 🔗 [Live App Demo on Streamlit](https://customerchurn-hmjyw8jnemjtefx85ri5pw.streamlit.app/)
+### 🔗 <a href="https://customerchurn-hmjyw8jnemjtefx85ri5pw.streamlit.app/" target="_blank">Live App Demo on Streamlit</a>
 
 ---
 
