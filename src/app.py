@@ -184,7 +184,9 @@ with tab2:
 with tab1:
     st.header("🧮 Predict Customer Churn")
 
+    st.markdown("Use 🌲**Random Forest** for customer retention focus **|** Use ⚡**XGBoost** for profit optimization focus")
     model_choice = st.radio("Select Prediction Model", ["Random Forest", "XGBoost"], horizontal=True)
+
     model = rf_model if model_choice == "Random Forest" else xgb_model
 
     col1, col2 = st.columns(2)
