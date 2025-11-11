@@ -195,10 +195,9 @@ docker run -p 8501:8501 churn-dashboard
 
 
 
-## 🧠 Why Docker?
+### 🧠 Why Docker
 
-Docker ensures your project runs exactly the same way on every system —  
-no more “works on my machine” issues 🚀
+>  *Docker ensures your project runs exactly the same way on every system — no “works on my machine” issues.*
 
 ---
 
