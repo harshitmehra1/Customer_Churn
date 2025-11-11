@@ -170,7 +170,37 @@ pip install -r requirements.txt
 streamlit run src/app.py
 
 ```
+---
 
+## 🐳 Run with Docker
+
+You can also run this project inside a **Docker container** — no need to install Python or dependencies manually.
+
+```bash
+# 🧱 Build the Docker image
+docker build -t churn-dashboard .
+
+# ▶️ Run the Container
+docker run -p 8501:8501 churn-dashboard
+
+# 🚀 Run the App in your browser:  
+👉 http://localhost:8501
+```
+
+## 📦 What This Does
+
+- Creates a lightweight, self-contained environment with all dependencies  
+- Runs the same Streamlit app as your local setup  
+- Perfect for sharing, testing, or deploying anywhere  
+
+
+
+## 🧠 Why Docker?
+
+Docker ensures your project runs exactly the same way on every system —  
+no more “works on my machine” issues 🚀
+
+---
 
 ## 🚀 Deployment
 
@@ -221,7 +251,7 @@ streamlit run src/app.py
 📎 [LinkedIn](https://www.linkedin.com/in/harshitmehra1/)  
 📎 [Streamlit Demo](https://customerchurn-hmjyw8jnemjtefx85ri5pw.streamlit.app/)
 
----
+
 
 ## 🌟 Support
 
