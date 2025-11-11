@@ -1,0 +1,14 @@
+# Ignore unnecessary files
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.log
+mlruns/
+.streamlit/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
